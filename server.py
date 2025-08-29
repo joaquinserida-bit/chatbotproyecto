@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configurar cliente de OpenAI
 # Asegúrate de tener tu API key en una variable de entorno
-client = OpenAI(api_key=os.environ.get("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"))
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 @app.route("/")
 def home():
@@ -48,4 +48,5 @@ def chat():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
